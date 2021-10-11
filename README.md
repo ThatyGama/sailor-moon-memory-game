@@ -27,7 +27,7 @@
 ![gameOver](https://user-images.githubusercontent.com/90471309/136828880-c76fa369-ccfc-4547-a978-40088f7e80a7.jpg)
 
 <br/>
-<p>Improvements can always be made, and I will sure do it as soon as possible.</p>
+<p>Improvements can always be made, and I will surely do it as soon as possible.</p>
 
 
 <h2>Made by: Thatyane Gama &#128218</h2>

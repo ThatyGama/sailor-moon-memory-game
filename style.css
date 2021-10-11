@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+#devThaty{
+    
+} */
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #cf2c63;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+/* newGame  */
+#newGame{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+
+    /* DISPLAY: FLEX TO BE MODIFIED BY JS  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    text-align: center;
+}
+
+#form{
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    padding: 200px 100px;
+    border: 10px solid rgb(250, 188, 214);
+    border-radius: 50%;
+}
+
+#form h1{
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #FEEC00;
+    -webkit-text-stroke: 1px #b43761;
+    text-shadow: 4px 4px #0a0d31;
+    letter-spacing: 2px;
+}
+
+#playGame, #soundGame{
+    padding: 15px;
+    width: 300px;
+    font-size: 20px;
+    background-color: #e66993;
+    border: 1px solid #e25382;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 500ms, 500ms, 1s;
+
+}
+
+#playGame{
+    color: #FEEC00;
+}
+
+#soundGame{
+    color: rgb(250, 188, 214);
+}
+
+#playGame:hover, #soundGame:hover{
+    background-color: #cf4171;
+    color: #FEE000;
+    transition-property: background-color;
+    transition-duration: 500ms, 500ms, 1s;
+}
+
+ #playGame:active, #soundGame:active{
+    background-color: #bb416a;
+    color: #d1c300;
+}
+
+/* gameBoard  */
+.btnSoundBoardClass{
+    position: absolute;
+    left: 15%;
+    padding: 22px 11px;
+    width: 90px;
+    height: 80px;
+    font-size: 15px;
+    background-color: #e66993;
+    color: rgb(240, 240, 240);
+    border-radius: 50%;
+    border: 2px solid #bb416a;
+    transition-property: background-color;
+    transition-duration: 500ms, 500ms, 1s;
+}
+
+.btnSoundBoardClass:hover{
+    background-color: #cf4171;
+    color: #FEE000;
+    transition-property: background-color;
+    transition-duration: 500ms, 500ms, 1s;
+}
+
+.btnSoundBoardClass:active{
+    background-color: #bb416a;
+    color: #d1c300;
+}
+
+#gameBoard{
+    max-width: 700px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 30px 0px 30px 0px;
+
+}
+
+.card_back, .card_front{
+    display: none;
+}
+
+.card{
+    width: 150px;
+    height: 120px;
+    cursor: pointer;
+    
+    top: 40px;
+    right: 60px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card_back, .card_front{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 5px solid rgb(250, 188, 214);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip{
+    transform: rotateY(180deg);
+}
+
+.card_front{
+    background-color: #f880a8;
+    transform: rotateY(180deg);
+
+}
+
+.card_back{
+    background-color: #f53e7b;
+    color: white;
+    font-size: 30px;
+    /* display: none;  */
+}
+
+
+/* gameOver  */
+#gameOver{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(105, 8, 97, 0.9);
+    color: white;
+    font-size: 50px;
+
+    /* DISPLAY: NONE TO BE MODIFIED BY JS  */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+}
+
+#gameOver div h1{
+    transform: translateY(-50%);
+    font-size: 40px;
+}
+
+#restart{
+    padding: 20px;
+    font-size: 20px;
+    background-color: #e66993;
+    color: #FEEC00;
+    border: 1px solid #e25382;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 500ms, 500ms, 1s;
+}
+
+#restart:hover{
+    background-color: #cf4171;
+    color: #FEE000;
+    transition-property: background-color;
+    transition-duration: 500ms, 500ms, 1s;
+}
+
+#restart:focus, #restart:active{
+    background-color: #bb416a;
+    color: #d1c300;
+}
+
+
+@media screen and (max-width: 1200px){
+    #form{
+        width: 90%;
+        height: 95%;
+        background-size: fill;
+        background-position: right;
+    }
+
+}
+
+@media screen and (max-width: 840px){
+    
+    #form{
+        height: 95%;
+        background-size: fill;
+        background-position: right;
+    }
+    
+    #form h1{
+        font-size: 30px;
+        margin-top:30px;
+        margin-bottom:80px;
+        text-shadow: 2px 2px #0a0d31;
+    }
+
+    #playGame, #soundGame{
+        padding: 9px 12px;
+        width: 160px;
+        font-size: 18px;
+    }
+
+    #gameBoard{
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        left: 240px;
+        margin: 30px 0px 70px 20%;
+    }
+
+    .card{
+        width: 110px;
+        height: 150px;
+        top: 20px;
+    }
+
+    #restart{
+        padding: 9px 12px;
+        width: 160px;
+        font-size: 18px;
+    }
+
+    #gameOver div h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 420px){
+
+    #form{
+        height: 95%;
+        background-size: 110vw 100%;
+        background-position: right;
+        box-sizing: border-box;
+    }
+
+    #form h1{
+        font-size: 20px;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px #0a0d31;
+    }
+       
+    
+    #playGame, #soundGame{
+        padding: 12px 10px;
+        width: 150px;
+        font-size: 18px;
+    }
+
+    #gameBoard{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 20px 0px 0px 90px;
+    }
+
+    .card{
+        width: 56px;
+        height: 100px;
+    }
+
+    #restart{
+        padding: 12px 10px;
+        width: 150px;
+        font-size: 18px;
+    }
+
+    #gameOver div h1{
+        font-size: 20px;
+    }
+}

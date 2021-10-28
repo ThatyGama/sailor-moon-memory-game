@@ -307,13 +307,15 @@ body{
     #gameBoard{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
-        margin: 20px 0px 0px 90px;
+        transform: translateX(5%);
+        margin-top: 10px;
+        width: 390px;
     }
 
     .card{
-        width: 56px;
+        width: 60px;
         height: 100px;
     }
 

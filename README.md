@@ -11,6 +11,8 @@
 
 <br/>
 
+<h6>Direct Link!: https://thatygama.github.io/sailor-moon-memory-game/ </h6>
+
 <h5>Menu</h5>
 
 ![gameMenu](https://user-images.githubusercontent.com/90471309/136828890-773ff0f4-4f02-4f94-9f70-820206bca5e2.jpg)
